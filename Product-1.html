@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple iPhone 15 (128 GB) - Black - E-Commerce Website</title>
+    <link rel="stylesheet" href="product-1.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/elevatezoom-plus@1.1.20/jquery.ez-plus.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="amazon.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-details">
+            <div class="product-gallery">
+                <div class="thumbnails">
+                    <img src="https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg" alt="Apple iPhone 15 (128 GB) - Black " onclick="changeMainImage('https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/81BnjSLm2oL._SX679_.jpg" alt="Apple iPhone 15 (128 GB) - Black " onclick="changeMainImage('https://m.media-amazon.com/images/I/81BnjSLm2oL._SX679_.jpg')">
+                    <img src="https://i.ytimg.com/vi/xqyUdNxWazA/maxresdefault.jpg" alt="Apple iPhone 15 (128 GB) - Black" onclick="changeMainImage('https://www.youtube.com/watch?v=xqyUdNxWazA', true)">
+                </div>
+                <div class="main-image" id="main-image-container">
+                    <img id="main-image" src="https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg" alt="Apple iPhone 15 (128 GB) - Black" data-zoom-image="https://m.media-amazon.com/images/I/81lek2iav1L._SX679_.jpg">
+                </div>
+            </div>
+            <div class="product-grid" id="product-list">   
+                <div class="product-info">
+                    <h1>Apple iPhone 15 (128 GB) - Black</h1>
+                    <div class="currency-converter">
+                        <div class="currency-selector">
+                            <label for="currency-selector">Choose your currency:</label>
+                            <select id="currency-selector">
+                                <option value="USD" selected>USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="JPY">JPY</option>
+                                <option value="INR">INR</option>
+                            </select>
+                        </div> 
+                    </div>
+                    <div class="price-and-cart" >
+                    <p data-id="8" data-name="Apple iPhone 15 (128 GB) - Black" data-price="19.99"> <span class="price" data-currency="USD">$19.99</span> </p>
+                    <button class="add-to-cart" id="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <li class="description">
+                    Brand -	Apple
+                    </li>
+                    <li class="description">
+                    Model Name	- iPhone 15
+                    </li>
+                    <li class="description">
+                    Network - Unlocked for All Carriers
+                    </li>
+                    <li class="description">
+                    Service Provider -   
+                    </li>
+                    <li class="description">
+                    Operating System - iOS
+                    </li>
+                    <li class="description">
+                    Cellular Technology - 5G
+                    </li>
+                <h1>About This Item</h1>       
+                    <li>DYNAMIC ISLAND COMES TO IPHONE 15 — Dynamic Island bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else. You can see who’s calling, track your next ride, check your flight status, and so much more.</li> 
+                    <li>INNOVATIVE DESIGN — iPhone 15 features a durable color-infused glass and aluminum design. It’s splash, water, and dust resistant. The Ceramic Shield front is tougher than any smartphone glass. And the 6.1" Super Retina XDR display is up to 2x brighter in the sun compared to iPhone 14.</li>
+                    <li>48MP MAIN CAMERA WITH 2X TELEPHOTO — The 48MP Main camera shoots in super-high resolution. So it’s easier than ever to take standout photos with amazing detail. The 2x optical-quality Telephoto lets you frame the perfect close-up.</li>
+                    <li>NEXT-GENERATION PORTRAITS — Capture portraits with dramatically more detail and color. Just tap to shift the focus between subjects — even after you take the shot.</li>
+                    <li>POWERHOUSE A16 BIONIC CHIP — The superfast chip powers advanced features like computational photography, fluid Dynamic Island transitions, and Voice Isolation for phone calls. And A16 Bionic is incredibly efficient to help deliver great all-day battery life.</li>
+                
+            </div>
+            
+        </section>
+
+
+
+        <h2>From the manufacturer</h2>
+        <img src="https://m.media-amazon.com/images/G/31/img21/Wireless/Madhav/september/Apple/River/R1807_1._CB575346353_.jpg">
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-Commerce Website. All rights reserved.</p>
+    </footer>
+
+    <script src="product-1.js"></script>
+    <script src="product.js"></script>
+    <script>// Function to get cart items from localStorage
+        function getCartItems() {
+            const cartItems = localStorage.getItem('cartItems');
+            return cartItems ? JSON.parse(cartItems) : [];
+        }
+        
+        // Function to update the cart count in the navbar
+        function updateCartCount() {
+            const cartItems = getCartItems();
+            const cartCountElement = document.getElementById('cart-count');
+            const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+        
+            if (cartCountElement) {
+                cartCountElement.textContent = `(${totalItems})`;
+            }
+        }
+        
+        // Run the updateCartCount function when the page loads
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+        
+        // Run the updateCartCount function whenever an item is added to the cart
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', event => {
+                updateCartCount();
+            });
+        });
+        </script>
+</body>
+</html>

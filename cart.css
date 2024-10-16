@@ -1,0 +1,93 @@
+/* styles.css */
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main styles */
+main {
+    padding: 20px;
+}
+
+/* Cart section styles */
+#cart-section {
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+#total {
+    margin-top: 20px;
+}
+
+#total p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#checkout-btn {
+    padding: 10px 20px;
+    background-color: #232f3e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#checkout-btn:hover {
+    background-color: #3b4d61;
+}
+
+/* Footer styles */
+footer {
+    background-color: #232f3e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 14px;
+}

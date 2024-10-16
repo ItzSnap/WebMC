@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Galaxy S24 Ultra 5G - E-Commerce Website</title>
+    <link rel="stylesheet" href="product-2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/elevatezoom-plus@1.1.20/jquery.ez-plus.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="amazon.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-details">
+            <div class="product-gallery">
+                <div class="thumbnails">
+                    <img src="https://m.media-amazon.com/images/I/81lek2iav1L._SX679_.jpg" alt="Samsung Galaxy S24 Ultra 5G Image " onclick="changeMainImage('https://m.media-amazon.com/images/I/81lek2iav1L._SX679_.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/71E-ptCgHcL._SX679_.jpg" alt="Samsung Galaxy S24 Ultra 5G Image " onclick="changeMainImage('https://m.media-amazon.com/images/I/71E-ptCgHcL._SX679_.jpg')">
+                    <img src="https://i.ytimg.com/vi/3hPoEmlBQdY/maxresdefault.jpg" alt="Samsung Galaxy S24 Ultra 5G Video" onclick="changeMainImage('https://www.youtube.com/embed/NkrXxKBjxJM', true)">
+                </div>
+                <div class="main-image" id="main-image-container">
+                    <img id="main-image" src="https://m.media-amazon.com/images/I/81lek2iav1L._SX679_.jpg" alt="Samsung Galaxy S24 Ultra 5G" data-zoom-image="https://m.media-amazon.com/images/I/81lek2iav1L._SX679_.jpg">
+                </div>
+            </div>
+            <div class="product-grid" id="product-list">   
+                <div class="product-info">
+                    <h1>Samsung Galaxy S24 Ultra 5G</h1>
+                    <div class="currency-converter">
+                        <div class="currency-selector">
+                            <label for="currency-selector">Choose your currency:</label>
+                            <select id="currency-selector">
+                                <option value="USD" selected>USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="JPY">JPY</option>
+                                <option value="INR">INR</option>
+                            </select>
+                        </div> 
+                    </div>
+                    <div class="price-and-cart" >
+                    <p data-id="9" data-name="Samsung Galaxy S24 Ultra 5G" data-price="29.99"> <span class="price" data-currency="USD">$29.99</span> </p>
+                    <button class="add-to-cart" id="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <li class="description">
+                    Brand -	Samsung
+                    </li>
+                    <li class="description">
+                    Model Name	- Samsung Galaxy S24 Ultra 5G
+                    </li>
+                    <li class="description">
+                    Network - Unlocked for All Carriers
+                    </li>
+                    <li class="description">
+                    Service Provider -
+                    </li>
+                    <li class="description">
+                    Operating System - Android 14.0
+                    </li>
+                    <li class="description">
+                    Cellular Technology - 5G
+                    </li>
+                <h1>About This Item</h1>   
+                    <li>Meet Galaxy S24 Ultra, the ultimate form of Galaxy Ultra with a new titanium exterior and a 17.25cm (6.8") flat display. It's an absolute marvel of design.</li>
+                    <li>The legacy of Galaxy Note is alive and well. Write, tap and navigate with precision your fingers wish they had on the new, flat display.</li>
+                    <li>With the most megapixels on a smartphone and AI processing, Galaxy S24 Ultra sets the industry standard for image quality every time you hit the shutter. What's more, the new ProVisual engine recognizes objects — improving colour tone, reducing noise and bringing out detail.</li>
+                    <li>A new way to search is here with Circle to Search. While scrolling your fav social network, use your S Pen or finger to circle something and get Google Search results.</li>
+                    <li>Victory can be yours with the new Snapdragon 8 Gen 3 for Galaxy. Faster processing gives you the power you need for all the gameplay you want. Then, manifest graphic effects in real time with ray tracing for hyper-realistic shadows and reflections.</li> 
+                
+                
+            </div>
+            
+        </section>
+        <h2>From the manufacturer</h2>
+        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/1aaabbf8-ac51-4eb4-9e69-a23df371cb4c.__CR0,0,1464,600_PT0_SX1464_V1___.jpg">
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-Commerce Website. All rights reserved.</p>
+    </footer>
+
+    <script src="product-2.js"></script>
+    <script src="product.js"></script>
+    <script>// Function to get cart items from localStorage
+        function getCartItems() {
+            const cartItems = localStorage.getItem('cartItems');
+            return cartItems ? JSON.parse(cartItems) : [];
+        }
+        
+        // Function to update the cart count in the navbar
+        function updateCartCount() {
+            const cartItems = getCartItems();
+            const cartCountElement = document.getElementById('cart-count');
+            const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+        
+            if (cartCountElement) {
+                cartCountElement.textContent = `(${totalItems})`;
+            }
+        }
+        
+        // Run the updateCartCount function when the page loads
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+        
+        // Run the updateCartCount function whenever an item is added to the cart
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', event => {
+                updateCartCount();
+            });
+        });
+        </script>
+    
+</body>
+</html>

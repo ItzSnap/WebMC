@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Zeal Premium Fashion Smartwatch - E-Commerce Website</title>
+    <link rel="stylesheet" href="product-2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/elevatezoom-plus@1.1.20/jquery.ez-plus.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="amazon.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-details">
+            <div class="product-gallery">
+                <div class="thumbnails">
+                    <img src="https://m.media-amazon.com/images/I/71JZiGISnAL._SY450_.jpg" alt="Titan Zeal Premium Fashion Smartwatch Image " onclick="changeMainImage('https://m.media-amazon.com/images/I/71JZiGISnAL._SY450_.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/81JQMpWKAFL._SY450_.jpg" alt="Titan Zeal Premium Fashion Smartwatch Image " onclick="changeMainImage('https://m.media-amazon.com/images/I/81JQMpWKAFL._SY450_.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/81YrLS4MV8L._SY450_.jpg" alt="Titan Zeal Premium Fashion Smartwatch Image " onclick="changeMainImage('https://m.media-amazon.com/images/I/81YrLS4MV8L._SY450_.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/81rAPdUPz4L._SY450_.jpg" alt="Titan Zeal Premium Fashion Smartwatch Image " onclick="changeMainImage('https://m.media-amazon.com/images/I/81rAPdUPz4L._SY450_.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/81pXXRHEBfL._SY450_.jpg" alt="Titan Zeal Premium Fashion Smartwatch Image " onclick="changeMainImage('https://m.media-amazon.com/images/I/81pXXRHEBfL._SY450_.jpg')">
+                </div>
+                <div class="main-image" id="main-image-container">
+                    <img id="main-image" src="https://m.media-amazon.com/images/I/71JZiGISnAL._SY450_.jpg" alt="Titan Zeal Premium Fashion Smartwatch" data-zoom-image="https://m.media-amazon.com/images/I/71JZiGISnAL._SY450_.jpg">
+                </div>
+            </div>
+            <div class="product-grid" id="product-list">   
+                <div class="product-info">
+                    <h1>Titan Zeal Premium Fashion Smartwatch</h1>
+                    <div class="currency-converter">
+                        <div class="currency-selector">
+                            <label for="currency-selector">Choose your currency:</label>
+                            <select id="currency-selector">
+                                <option value="USD" selected>USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="JPY">JPY</option>
+                                <option value="INR">INR</option>
+                            </select>
+                        </div> 
+                    </div>
+                    <div class="price-and-cart" >
+                    <p data-id="5" data-name="	Titan Zeal" data-price="59.99"> <span class="price" data-currency="USD">$59.99</span> </p>
+                    <button class="add-to-cart" id="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <li class="description">
+                    Brand -	Titan
+                    </li>
+                    <li class="description">
+                    Model Name	- Titan Zeal
+                    </li>
+                    <li class="description">
+                    Style -	Modern
+                    </li>
+                    <li class="description">
+                    Colour - Black Mesh
+                    </li>
+                    <li class="description">
+                    Screen Size	- 1.85 Inches
+                    </li>
+                    <li class="description">
+                    Cellular Technology - 5G
+                    </li>
+                <h1>About This Item</h1>   
+                    <li>Titan Zeal with 1.85" AMOLED Display with AOD, Industry Best 390 x 450 Pixel Resolution</li>
+                    <li>Premium Body Design | Available in Leather and Mesh Straps | Functional Crown</li>
+                    <li>SingleSync BT Calling with Favourite Contact Storage</li>
+                    <li>100+ Sports Modes with AI Coach and Auto Multisport Recognition</li>
+                    <li>Upto 5 Day of Battery Life Under Standard Conditions, 3 Days of Battery Life with BT Calling</li> 
+                    <li>Calculator, Calendar, In-Built Games, AI Voice Assistant and much more</li>
+                
+                
+            </div>
+            
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-Commerce Website. All rights reserved.</p>
+    </footer>
+
+    <script src="product-2.js"></script>
+    <script src="product.js"></script>
+    <script>// Function to get cart items from localStorage
+        function getCartItems() {
+            const cartItems = localStorage.getItem('cartItems');
+            return cartItems ? JSON.parse(cartItems) : [];
+        }
+        
+        // Function to update the cart count in the navbar
+        function updateCartCount() {
+            const cartItems = getCartItems();
+            const cartCountElement = document.getElementById('cart-count');
+            const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+        
+            if (cartCountElement) {
+                cartCountElement.textContent = `(${totalItems})`;
+            }
+        }
+        
+        // Run the updateCartCount function when the page loads
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+        
+        // Run the updateCartCount function whenever an item is added to the cart
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', event => {
+                updateCartCount();
+            });
+        });
+        </script>
+    
+</body>
+</html>

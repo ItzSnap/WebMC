@@ -1,0 +1,15 @@
+/* styles.css */
+.vertical-product-list {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to the next line when container width is exceeded */
+    justify-content: center; /* Center items horizontally */
+    list-style-type: horizontal; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    text-align: center; /* Center the text content */
+}
+
+.vertical-product-list li {
+    margin-right: 20%; /* Add space between items */
+    margin-bottom: 20%; /* Add space between rows */
+    display: inline; /* Ensure each item is displayed as a block element */
+}

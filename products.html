@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - My E-Commerce Website</title>
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="align.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="amazon.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="signin.html">Sign in</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search products...">
+                <button id="search-button">Search</button>
+            </div>
+        </nav>
+    </header>
+<ul id="" class="vertical-product-list">
+    <main>
+        
+
+        <section class="currency-converter">
+            <h1>Product Prices</h1>
+            <div class="currency-selector">
+                <label for="currency-selector">Choose your currency:</label>
+                <select id="currency-selector">
+                    <option value="USD" selected>USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                    <option value="INR">INR</option>
+                </select>
+            </div> 
+        </section>    
+        <section id="products-section">
+            <h2>Our Products</h2>
+            
+            <div class="product-grid" id="product-list">
+                   
+                                                                            
+                     <div class="product-item">   
+                        <a href="Product-1.html">                                                                                                                                                                          
+                             <img src="https://m.media-amazon.com/images/I/71657TiFeHL._AC_UY327_FMwebp_QL65_.jpg" alt="Product 8" >
+                        </a>
+                        <h3 >Apple iPhone 15 (128 GB) - Black</h3>
+                        <li data-id="8" data-name="Apple iPhone 15 (128 GB) - Black" data-price="19.99" > <span class="price" data-currency="USD">$19.99</span> <button class="add-to-cart">Add to Cart</button>  </li>
+                    </div>
+                    
+                    
+                    <div class="product-item">
+                        <a href="product-2.html">
+                        <img src="https://m.media-amazon.com/images/I/71j6POXc0uL._AC_UY327_FMwebp_QL65_.jpg" alt="Product 9">
+                        </a>
+                        <h3>Samsung Galaxy S24 Plus 5G AI Smartphone (Cobalt Violet, 12GB, 512GB Storage)</h3>
+                        <li data-id="9" data-name="Samsung Galaxy S24 Plus 5G AI Smartphone (Cobalt Violet, 12GB, 512GB Storage)" data-price="29.99"> <span class="price" data-currency="USD">$29.99</span> <button class="add-to-cart">Add to Cart</button>  </li>
+                    </div>
+                    
+                
+                    <div class="product-item">
+                        <a href="product-3.html">
+                        <img src="https://m.media-amazon.com/images/I/51GGNToj7aL._AC_UY327_FMwebp_QL65_.jpg" alt="Product 10">
+                        </a>
+                        <h3>Acer Nitro V Gaming Laptop 13th Gen Intel Core i5-13420H with RTX 3050 Graphics</h3>
+                        <li data-id="10" data-name="Acer Nitro V Gaming Laptop 13th Gen Intel Core i5-13420H with RTX 3050 Graphics" data-price="39.99"> <span class="price" data-currency="USD">$39.99</span> <button class="add-to-cart">Add to Cart</button>  </li>
+                    </div>
+                    
+                
+                    <div class="product-item">
+                        <a href="product-4.html">
+                        <img src="https://m.media-amazon.com/images/I/81+mIeSK2AL._AC_UL480_FMwebp_QL65_.jpg" alt="Product 11">
+                        </a>
+                        <h3>NytActiv Leather Ace Football Size 5</h3>
+                        <li data-id="11" data-name="NytActiv Leather Ace Football Size 5" data-price="49.99"> <span class="price" data-currency="USD">$49.99</span> <button class="add-to-cart">Add to Cart</button>  </li>
+                    </div>
+                    
+                    <div class="product-item">
+                        <a href="product-5.html">
+                        <img src="https://m.media-amazon.com/images/I/71JZiGISnAL._AC_UY327_FMwebp_QL65_.jpg" alt="Product 5">
+                        </a>
+                        <h3>Titan Zeal Premium Fashion Smartwatch</h3>
+                        <li data-id="5" data-name="Titan Zeal Premium Fashion Smartwatch" data-price="59.99"> <span class="price" data-currency="USD">$59.99</span> <button class="add-to-cart">Add to Cart</button>  </li>
+                    </div>
+    
+                    <div class="product-item">
+                        <a href="product-6.html">
+                        <img src="https://m.media-amazon.com/images/I/51MDjlZz+wL._AC_UY327_FMwebp_QL65_.jpg" alt="Product 6">
+                        </a>
+                        <h3>ASUS ROG Strix GA35, 12 Core, AMD Ryzen 9 5900X, Gaming Desktop</h3>
+                        <li data-id="6" data-name="ASUS ROG Strix GA35, 12 Core, AMD Ryzen 9 5900X, Gaming Desktop" data-price="99.99"> <span class="price" data-currency="USD">$99.99</span> <button class="add-to-cart">Add to Cart</button>  </li>
+                    </div>
+                
+                    <div class="product-item">
+                        <img src="https://m.media-amazon.com/images/I/71TpH0WnUwL._SX569_.jpg" alt="Product 7">
+                        <h3>Momentum 4 Copper</h3>
+                        <li data-id="7" data-name="Momentum 4 Copper" data-price="1000"> <span class="price" data-currency="USD">$1000</span> <button class="add-to-cart">Add to Cart</button>  </li>
+                    </div>
+            </div>      
+              
+                  
+            
+            
+    
+            <script src="prod-cart-language.js"></script>
+            
+            
+            </select>
+                
+        </section>
+        
+        
+        
+    </main> 
+</ul>    
+     
+    <script src="add-to-cart.js"></script>
+    <script>// Function to get cart items from localStorage
+        function getCartItems() {
+            const cartItems = localStorage.getItem('cartItems');
+            return cartItems ? JSON.parse(cartItems) : [];
+        }
+
+        // Function to update the cart count in the navbar
+        function updateCartCount() {
+            const cartItems = getCartItems();
+            const cartCountElement = document.getElementById('cart-count');
+            const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+
+            if (cartCountElement) {
+                cartCountElement.textContent = `(${totalItems})`;
+            }
+        }
+
+        // Run the updateCartCount function when the page loads
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+
+        // Run the updateCartCount function whenever an item is added to the cart
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', event => {
+                updateCartCount();
+            });
+        });
+
+        document.getElementById('search-button').addEventListener('click', function() {
+            const searchQuery = document.getElementById('search-input').value.toLowerCase();
+            const products = document.querySelectorAll('.product-item');
+
+            products.forEach(product => {
+                const productName = product.querySelector('h3').textContent.toLowerCase();
+                if (productName.includes(searchQuery)) {
+                    product.style.display = '';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        });
+
+        document.getElementById('search-input').addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                document.getElementById('search-button').click();
+            }
+        });
+        </script>
+        
+        <footer>
+            <p>&copy; 2024 My E-Commerce Website. All rights reserved.</p>
+        </footer>
+        

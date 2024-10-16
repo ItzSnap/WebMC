@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NytActiv Leather Ace Football Size 5 - E-Commerce Website</title>
+    <link rel="stylesheet" href="product-2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/elevatezoom-plus@1.1.20/jquery.ez-plus.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="amazon.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="product-details">
+            <div class="product-gallery">
+                <div class="thumbnails">
+                    <img src="https://m.media-amazon.com/images/I/81+mIeSK2AL._SX569_.jpg" alt="NytActiv Leather Ace Football Size 5 " onclick="changeMainImage('https://m.media-amazon.com/images/I/81+mIeSK2AL._SX569_.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/81bL+Hmd61L._SX569_.jpg" alt="NytActiv Leather Ace Football Size 5 " onclick="changeMainImage('https://m.media-amazon.com/images/I/81bL+Hmd61L._SX569_.jpg')">
+                </div>
+                <div class="main-image" id="main-image-container">
+                    <img id="main-image" src="https://m.media-amazon.com/images/I/81+mIeSK2AL._SX569_.jpg" alt="Samsung Galaxy S24 Ultra 5G" data-zoom-image="https://m.media-amazon.com/images/I/81+mIeSK2AL._SX569_.jpg">
+                </div>
+            </div>
+        <div class="product-grid" id="product-list">   
+            <div class="product-info">
+                <h1>NytActiv Leather Ace Football Size 5</h1>
+                <div class="currency-converter">
+                    <div class="currency-selector">
+                        <label for="currency-selector">Choose your currency:</label>
+                        <select id="currency-selector">
+                            <option value="USD" selected>USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="JPY">JPY</option>
+                            <option value="INR">INR</option>
+                        </select>
+                    </div> 
+                </div>
+                <div class="price-and-cart" >
+                <p data-id="11" data-name="NytActiv Leather Ace Football Size 5" data-price="49.99"> <span class="price" data-currency="USD">$49.99</span> </p>
+                <button class="add-to-cart" id="add-to-cart-btn">Add to Cart</button>
+                </div>
+                    <li class="description">
+                    Brand -	NytActiv
+                    </li>
+                    <li class="description">
+                    Material - Leather
+                    </li>
+                    <li class="description">
+                    Color - White, Neon, Black and Light Blue
+                    </li>
+                    <li class="description">
+                    Age Range - 12+
+                    </li>
+                    <li class="description">
+                    (Description)
+                    </li>
+                    <li class="description">
+                    Item Weight - 430 Grams
+                    </li>
+                <h1>About This Item</h1>   
+                    <li>Unveiling the NytActiv Ace premium 4-ply football, designed for exceptional play on hard surfaces, artificial turf, damp grass, and concrete grounds. Crafted for durability and performance in all conditions, this football guarantees an unmatched experience, delivering an unparalleled experience regardless of the environment.</li>
+                    <li>The NytActiv football boasts a vibrant, stylish multicolor design, catering to football enthusiasts, especially those inclined towards freestyle play. This ball's durable hand-stitched construction with 32 panels ensures longevity for practice and matches.Its vibrant design caters to indoor and outdoor play, making it a reliable choice for football aficionados.</li>
+                    <li>This size 5 leather football features a unique multicolor design, combining durability with vibrant aesthetics. Crafted from high-quality materials, it ensures superior grip and excellent air retention due to its butyl core. Ideal for hard ground football, its lasting construction promises reliable performance in any game.</li>
+                    <li>This versatile size 5 soccer ball is a game-changer. From hard ground football to freestyle play, its durability and adaptability make it ideal for training, matches, or a casual kickabout. With its quality build and versatility, it's the go-to choice for soccer enthusiasts of all levels.</li>
+                    <li>Purchase the ultimate football, ideal for all conditions, durable, and designed to elevate your performance order now for an enhanced game experience!</li> 
+                
+                
+            </div>
+        </div>    
+        </section>
+        <h2>From the manufacturer</h2>
+        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/52d39b48-3aa5-475a-a173-1a94f4505b1b.__CR0,0,3031,1875_PT0_SX970_V1___.jpg">
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-Commerce Website. All rights reserved.</p>
+    </footer>
+
+    <script src="product-2.js"></script>
+    <script src="product.js"></script>
+    <script>// Function to get cart items from localStorage
+        function getCartItems() {
+            const cartItems = localStorage.getItem('cartItems');
+            return cartItems ? JSON.parse(cartItems) : [];
+        }
+        
+        // Function to update the cart count in the navbar
+        function updateCartCount() {
+            const cartItems = getCartItems();
+            const cartCountElement = document.getElementById('cart-count');
+            const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+        
+            if (cartCountElement) {
+                cartCountElement.textContent = `(${totalItems})`;
+            }
+        }
+        
+        // Run the updateCartCount function when the page loads
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+        
+        // Run the updateCartCount function whenever an item is added to the cart
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', event => {
+                updateCartCount();
+            });
+        });
+        </script>
+    
+    
+</body>
+</html>

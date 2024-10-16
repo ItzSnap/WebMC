@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acer ANV15-51 - E-Commerce Website</title>
+    <link rel="stylesheet" href="product-2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/elevatezoom-plus@1.1.20/jquery.ez-plus.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="amazon.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-details">
+            <div class="product-gallery">
+                <div class="thumbnails">
+                    <img src="https://m.media-amazon.com/images/I/51GGNToj7aL._SX679_.jpg" alt="Acer ANV15-51 Image " onclick="changeMainImage('https://m.media-amazon.com/images/I/51GGNToj7aL._SX679_.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/61q1-PG3KZL._SX679_.jpg" alt="Acer ANV15-51 Image " onclick="changeMainImage('https://m.media-amazon.com/images/I/61q1-PG3KZL._SX679_.jpg')">
+                </div>
+                <div class="main-image" id="main-image-container">
+                    <img id="main-image" src="https://m.media-amazon.com/images/I/51GGNToj7aL._SX679_.jpg" alt="Acer ANV15-51 5G" data-zoom-image="https://m.media-amazon.com/images/I/51GGNToj7aL._SX679_.jpg">
+                </div>
+            </div>
+            <div class="product-grid" id="product-list">   
+                <div class="product-info">
+                    <h1>Acer ANV15-51</h1>
+                    <div class="currency-converter">
+                        <div class="currency-selector">
+                            <label for="currency-selector">Choose your currency:</label>
+                            <select id="currency-selector">
+                                <option value="USD" selected>USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="JPY">JPY</option>
+                                <option value="INR">INR</option>
+                            </select>
+                        </div> 
+                    </div>
+                    <div class="price-and-cart" >
+                    <p data-id="10" data-name="Acer ANV15-51" data-price="39.99"> <span class="price" data-currency="USD">$39.99</span> </p>
+                    <button class="add-to-cart" id="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <li class="description">
+                    Brand -	Acer
+                    </li>
+                    <li class="description">
+                    Model Name	- ANV15-51
+                    </li>
+                    <li class="description">
+                    Screen Size - 15.6 inches
+                    </li>
+                    <li class="description">
+                    Color - Black
+                    </li>
+                    <li class="description">
+                    Hard Disk - 1TB 
+                    Size 
+                    </li>
+                    <li class="description">
+                    CPU Model - Core i5
+                    </li>
+                    <li class="description">
+                    RAM - 16 GB
+                    </li>
+                    <li class="description">
+                    Memory 
+                    Installed 
+                    Size
+                    </li>
+                    <li class="description">
+                    Operating System - Windows 11 Home
+                    </li>
+                    <li class="description">
+                    Special Feature - Backlit Keyboard
+                    </li>
+                    <li class="description">
+                    Graphics Card - Dedicated
+                    </li>
+                    <li class="description">
+                    Description -
+                    </li>
+                <h1>About This Item</h1>   
+                    <li>Processor: Intel Core i5-13420H processor - 8 cores, max turbo up to 4.60 Ghz | RAM : 16 GB of DDR5 system memory, upgradable to 32 GB (Memory Frequency: Up to 5200 MT/s)</li>
+                    <li>Display : 15.6" display with IPS (In-Plane Switching) technology, Full HD 1920 x 1080, Acer ComfyView LED-backlit TFT LCD, 16:9 aspect ratio, supporting 144 Hz refresh rate</li>
+                    <li>Graphics : NVIDIA GeForce RTX 3050 with 6 GB of dedicated GDDR6</li>
+                    <li>Storage : 1 TB SSD, PCIe Gen4, 16 Gb/s, NVMe ( Upgradable Upto 2*1 TB SSD) | OS : Windows 11 Home 64-bit</li>
+                    <li>Ports: 1 x USB 3.2 Gen 1 port with power-off charging, 1 x USB 3.2 Gen 1 port, 1 x USB Type-C port (Thunderbolt ) | Features: Backlit keyboard</li> 
+                
+                
+            </div>
+            
+        </section>
+        <h2>From the manufacturer</h2>
+        <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/9ad1ff23-a83d-41dd-863b-947ad872a8f2.__CR0,0,970,300_PT0_SX970_V1___.jpg">
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-Commerce Website. All rights reserved.</p>
+    </footer>
+
+    <script src="product-2.js"></script>
+    <script src="product.js"></script>
+    <script>// Function to get cart items from localStorage
+        function getCartItems() {
+            const cartItems = localStorage.getItem('cartItems');
+            return cartItems ? JSON.parse(cartItems) : [];
+        }
+        
+        // Function to update the cart count in the navbar
+        function updateCartCount() {
+            const cartItems = getCartItems();
+            const cartCountElement = document.getElementById('cart-count');
+            const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+        
+            if (cartCountElement) {
+                cartCountElement.textContent = `(${totalItems})`;
+            }
+        }
+        
+        // Run the updateCartCount function when the page loads
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+        
+        // Run the updateCartCount function whenever an item is added to the cart
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', event => {
+                updateCartCount();
+            });
+        });
+        </script>
+    
+</body>
+</html>

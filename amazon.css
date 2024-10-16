@@ -1,0 +1,82 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: gray;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.features, .testimonials {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.features h2, .testimonials h2 {
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.feature, .testimonial {
+    margin-bottom: 2em;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.testimonial p {
+    font-style: italic;
+}
